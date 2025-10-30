@@ -28,7 +28,7 @@ const dz = useImageDrop()
       <img
         :src="cloud1"
         alt="Awan latar"
-        class="absolute cloud bottom-[0%] left-[0%] pointer-events-none"
+        class="absolute cloud hidden xl:flex bottom-[0%] left-[0%] pointer-events-none"
       />
       <img :src="cloud2" alt="Awan latar" class="cloud top-[0%] right-[0%] pointer-events-none" />
       <h2 class="text-3xl md:text-4xl font-semibold font-jakarta text-gray-800">
@@ -82,7 +82,8 @@ const dz = useImageDrop()
                 </svg>
               </div>
               <p class="text-lg font-semibold font-jakarta text-gray-800 mb-2">
-                Klik untuk unggah atau drag & drop
+                <span class="text-orange-500">Klik Ini</span> untuk unggah atau
+                <span class="text-orange-500">drag & drop</span>
               </p>
               <p class="text-sm text-gray-500">PNG, JPG, JPEG hingga 10MB</p>
             </div>
@@ -114,7 +115,7 @@ const dz = useImageDrop()
 
           <button
             v-if="dz.previewImage.value"
-            class="mt-6 w-full rounded-full bg-orange-500 px-8 py-4 font-semibold text-white shadow-lg hover:bg-orange-600 transition-colors text-lg"
+            class="mt-6 w-full rounded-full bg-gradient-to-b from-[#fb923c] to-[#ea580c] px-8 py-4 font-semibold text-white shadow-[0_10px_30px_rgba(234,88,12,0.4)] hover:shadow-[0_15px_40px_rgba(234,88,12,0.5)] hover:scale-[1.02] transition-all duration-300 text-lg"
           >
             Analisis Gambar
           </button>

@@ -37,6 +37,58 @@ import detech from '@/assets/hero/detech.png'
   position: relative;
   z-index: 10; /* Paling atas */
 }
+
+.shimmer-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    left: -100%;
+  }
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+
+.shimmer-button::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  padding: 2px;
+  background: linear-gradient(45deg, #fb923c, #ea580c, #fb923c);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  animation: glow-pulse 2s ease-in-out infinite;
+}
+
+@keyframes glow-pulse {
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
 </style>
 
 <template>
@@ -70,7 +122,8 @@ import detech from '@/assets/hero/detech.png'
           akurat, dan transparan.
         </p>
         <button
-          class="mt-8 rounded-full bg-orange-500 px-6 py-3 font-semibold text-white shadow-lg hover:bg-orange-600 transition-colors"
+          class="shimmer-button mt-8 rounded-full bg-gradient-to-b from-[#fb923c] to-[#ea580c] px-6 py-3 font-semibold text-white shadow-[0_10px_30px_rgba(234,88,12,0.4)] hover:shadow-[0_15px_40px_rgba(234,88,12,0.6)] hover:scale-[1.05] transition-all duration-300"
+          onclick="document.getElementById('ai-checker').scrollIntoView({ behavior: 'smooth' })"
         >
           Mulai Sekarang
         </button>

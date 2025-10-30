@@ -14,7 +14,6 @@ const navLinks = [
   { id: 'fitur', text: 'Fitur', href: '#fitur' },
   { id: 'ai-checker', text: 'AI', href: '#ai-checker' },
   { id: 'tentang', text: 'Tentang', href: '#tentang' },
-  { id: 'kontak', text: 'Kontak', href: '#kontak' },
 ]
 
 // === State ===
@@ -23,10 +22,12 @@ const activePage = ref('beranda')
 
 // === Scroll Spy Logic ===
 const handleScroll = () => {
-  const sections = navLinks.map(link => ({
-    id: link.id,
-    element: document.getElementById(link.id)
-  })).filter(section => section.element)
+  const sections = navLinks
+    .map((link) => ({
+      id: link.id,
+      element: document.getElementById(link.id),
+    }))
+    .filter((section) => section.element)
 
   const scrollPosition = window.scrollY + 100
 
@@ -43,15 +44,15 @@ const handleScroll = () => {
 const handleNavClick = (e: Event, href: string) => {
   e.preventDefault()
   isMobileMenuOpen.value = false
-  
+
   const targetId = href.replace('#', '')
   const targetElement = document.getElementById(targetId)
-  
+
   if (targetElement) {
     const offsetTop = targetElement.offsetTop - 80
     window.scrollTo({
       top: offsetTop,
-      behavior: 'smooth'
+      behavior: 'smooth',
     })
   }
 }
