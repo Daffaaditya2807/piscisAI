@@ -7,6 +7,38 @@ import cloud2 from '@/assets/hero/cloud2.png'
 const dz = useImageDrop()
 const prediction = useFishPrediction()
 
+// Function to handle prediction with image element
+const handlePredictClick = async () => {
+  if (!dz.previewImage.value) return
+
+  // Create an image element from the preview
+  const img = new Image()
+  img.crossOrigin = 'anonymous'
+  img.src = dz.previewImage.value
+
+  // Wait for image to load before predicting
+  img.onload = async () => {
+    // Convert image to canvas for better compatibility
+    const canvas = document.createElement('canvas')
+    const ctx = canvas.getContext('2d')
+
+    if (!ctx) {
+      alert('Tidak dapat membuat canvas context')
+      return
+    }
+
+    // Set canvas size to match Teachable Machine expected size (224x224)
+    canvas.width = 224
+    canvas.height = 224
+
+    // Draw image on canvas with resize
+    ctx.drawImage(img, 0, 0, 224, 224)
+
+    // Predict using canvas
+    await prediction.handlePredict(canvas)
+  }
+}
+
 // Reset function - reset both image and prediction
 const handleReset = () => {
   prediction.resetPrediction()
@@ -150,10 +182,11 @@ const handleReset = () => {
           <!-- Predict Button -->
           <button
             v-else-if="dz.previewImage.value"
-            @click="prediction.handlePredict"
-            class="mt-6 w-full rounded-full bg-gradient-to-b from-[#fb923c] to-[#ea580c] px-8 py-4 font-semibold text-white shadow-[0_10px_30px_rgba(234,88,12,0.4)] hover:shadow-[0_15px_40px_rgba(234,88,12,0.5)] hover:scale-[1.02] transition-all duration-300 text-lg"
+            @click="handlePredictClick"
+            :disabled="!prediction.modelLoaded.value"
+            class="mt-6 w-full rounded-full bg-gradient-to-b from-[#fb923c] to-[#ea580c] px-8 py-4 font-semibold text-white shadow-[0_10px_30px_rgba(234,88,12,0.4)] hover:shadow-[0_15px_40px_rgba(234,88,12,0.5)] hover:scale-[1.02] transition-all duration-300 text-lg disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            Prediksi Sekarang
+            {{ prediction.modelLoaded.value ? 'Prediksi Sekarang' : 'Memuat Model...' }}
           </button>
         </div>
 
