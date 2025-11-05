@@ -136,11 +136,7 @@ import detech from '@/assets/hero/detech.png'
         </button>
       </div>
 
-      <div
-        class="relative w-full max-w-4xl mx-auto mt-24 md:mt-10"
-        data-aos="fade-up"
-        data-aos-delay="400"
-      >
+      <div class="relative w-full max-w-4xl mx-auto mt-24 md:mt-10" data-aos="fade-up">
         <div
           class="relative w-full max-w-4xl rounded-2xl shadow-lg backdrop-blur-md bg-white/40 aspect-[16/9]"
         >
@@ -154,32 +150,24 @@ import detech from '@/assets/hero/detech.png'
         <IconHero
           :rotation="30.61"
           class="absolute left-[4%] top-[-5%] md:left-[4%] md:top-[-5%] lg:left-[5%] lg:top-[-5%] pointer-events-none"
-          data-aos="fade-down-right"
-          data-aos-delay="600"
         >
           🐟
         </IconHero>
         <IconHero
           :rotation="15.55"
           class="absolute right-[4%] top-[-5%] md:right-[4%] md:top-[-10%] lg:right-[5%] lg:top-[-10%] pointer-events-none"
-          data-aos="fade-down-left"
-          data-aos-delay="700"
         >
           👇
         </IconHero>
         <IconHero
           :rotation="-11.99"
-          class="absolute left-[-2%] top-[45%] md:left-[-2%] md:top-[35%] lg:left-[-5%] lg:top-[30%]"
-          data-aos="fade-right"
-          data-aos-delay="800"
+          class="absolute left-[-2%] top-[45%] md:left-[-2%] md:top-[35%] lg:left-[-5%] lg:top-[30%] pointer-events-none"
         >
           👌
         </IconHero>
         <IconHero
           :rotation="25.23"
-          class="absolute right-[-2%] top-[45%] md:right-[-2%] md:top-[35%] lg:right-[-5%] lg:top-[30%]"
-          data-aos="fade-left"
-          data-aos-delay="900"
+          class="absolute right-[-2%] top-[45%] md:right-[-2%] md:top-[35%] lg:right-[-5%] lg:top-[30%] pointer-events-none"
         >
           💦
         </IconHero>
