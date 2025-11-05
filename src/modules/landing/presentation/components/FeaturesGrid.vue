@@ -43,23 +43,19 @@ const features = ref([
   >
     <div class="relative z-10 max-w-7xl mx-auto">
       <div class="text-center">
-        <h2
-          class="text-3xl md:text-4xl font-semibold font-jakarta text-gray-800"
-          data-aos="fade-up"
-        >
+        <h2 class="text-3xl md:text-4xl font-semibold font-jakarta text-gray-800">
           Fitur yang Membuat <span class="text-orange-500">Kami Berbeda</span>
         </h2>
-        <p class="mt-3 text-base font-jakarta text-gray-600 max-w-2xl mx-auto" data-aos="fade-up">
+        <p class="mt-3 text-base font-jakarta text-gray-600 max-w-2xl mx-auto">
           Semua yang Anda butuhkan untuk mengenali ikan dengan cepat.
         </p>
       </div>
 
       <div class="mt-16 grid grid-cols-1 gap-12 md:grid-cols-3 md:gap-8">
         <div
-          v-for="(feature, index) in features"
+          v-for="feature in features"
           :key="feature.title"
           class="relative flex flex-col h-[400px] md:h-[500px] lg:h-[600px] rounded-2xl shadow-lg bg-gradient-to-b from-white to-[#FFDABE] overflow-hidden"
-          data-aos="fade-up"
         >
           <img :src="cloud1" alt="Awan latar" class="cloud bottom-[0%] left-[0%]" />
           <img :src="cloud2" alt="Awan latar" class="cloud top-[0%] right-[0%]" />

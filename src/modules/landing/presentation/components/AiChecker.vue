@@ -88,13 +88,10 @@ const handleReset = () => {
         alt="Awan latar"
         class="cloud hidden xl:flex top-[0%] right-[0%] pointer-events-none"
       />
-      <h2 class="text-3xl md:text-4xl font-semibold font-jakarta text-gray-800" data-aos="fade-up">
+      <h2 class="text-3xl md:text-4xl font-semibold font-jakarta text-gray-800">
         Identifikasi Dari <span class="text-orange-500">Gambar</span>
       </h2>
-      <p
-        class="mt-3 px-3 md:px-0 text-base font-jakarta text-gray-600 max-w-2xl mx-auto"
-        data-aos="fade-up"
-      >
+      <p class="mt-3 px-3 md:px-0 text-base font-jakarta text-gray-600 max-w-2xl mx-auto">
         Unggah satu foto untuk melihat Top-5 prediksi dan skor keputusannya. AI hanya dapat
         memprediksi spesies ikan berikut :
         <span class="italic text-gray-800"
@@ -110,7 +107,6 @@ const handleReset = () => {
         <div
           v-if="!prediction.showResults.value"
           class="backdrop-blur-md bg-white/20 rounded-2xl p-6"
-          data-aos="fade-up"
         >
           <div
             @drop.prevent="dz.handleDrop"
@@ -155,7 +151,7 @@ const handleReset = () => {
                 <span class="text-orange-500">Klik Ini</span> untuk unggah atau
                 <span class="text-orange-500">drag & drop</span>
               </p>
-              <p class="text-sm text-gray-500">PNG, JPG, JPEG hingga 10MB</p>
+              <p class="text-sm text-gray-500">PNG, JPG, JPEG hingga 2MB</p>
             </div>
 
             <div v-else class="relative">

@@ -22,11 +22,7 @@
   <section id="tentang">
     <div class="relative z-10 max-w-7xl mx-auto pt-10"></div>
     <div class="relative max-w-6xl mx-auto text-center overflow-hidden py-20">
-      <h2
-        class="text-3xl md:text-6xl font-jakarta text-gray-800"
-        data-aos="fade-up"
-        data-aos-duration="1200"
-      >
+      <h2 class="text-3xl md:text-6xl font-jakarta text-gray-800">
         PiscisAI menggabungkan visi komputer dan riset perikanan untuk mengidentifikasi spesies ikan
         dari foto secara cepat dan akurat. Seluruh proses berjalan langsung di browser<span
           class="shimmer-text"

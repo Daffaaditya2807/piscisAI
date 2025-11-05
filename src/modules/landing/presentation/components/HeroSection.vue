@@ -113,24 +113,22 @@ import detech from '@/assets/hero/detech.png'
       <div class="text-center text-gray-800">
         <h1
           class="text-3xl md:text-5xl lg:text-6xl max-w-4xl font-semibold font-jakarta mx-auto leading-tight"
-          data-aos="fade-up"
         >
           Kenali Setiap Spesies Ikan dengan
           <span class="text-orange-500 font-jakarta font-semibold">Kecerdasan Buatan</span>
         </h1>
-        <p class="mt-2 text-xs md:text-lg text-gray-600 max-w-2xl mx-auto" data-aos="fade-up">
+        <p class="mt-2 text-xs md:text-lg text-gray-600 max-w-2xl mx-auto">
           Unggah satu foto — biarkan PiscisAI menganalisis dan memprediksi jenis ikan dengan AI.
         </p>
         <button
           class="shimmer-button mt-8 rounded-full bg-gradient-to-b from-[#fb923c] to-[#ea580c] px-6 py-3 font-semibold text-white shadow-[0_10px_30px_rgba(234,88,12,0.4)] hover:shadow-[0_15px_40px_rgba(234,88,12,0.6)] hover:scale-[1.05] transition-all duration-300"
           onclick="document.getElementById('ai-checker').scrollIntoView({ behavior: 'smooth' })"
-          data-aos="zoom-in"
         >
           Mulai Sekarang
         </button>
       </div>
 
-      <div class="relative w-full max-w-4xl mx-auto mt-24 md:mt-10" data-aos="fade-up">
+      <div class="relative w-full max-w-4xl mx-auto mt-24 md:mt-10">
         <div
           class="relative w-full max-w-4xl rounded-2xl shadow-lg backdrop-blur-md bg-white/40 aspect-[16/9]"
         >

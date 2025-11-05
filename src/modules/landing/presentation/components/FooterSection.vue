@@ -6,7 +6,7 @@ import logo from '@/assets/logo.png'
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col md:flex-row justify-between gap-8">
         <!-- Logo & Description -->
-        <div class="flex-shrink-0" data-aos="fade-up">
+        <div class="flex-shrink-0">
           <div class="flex items-center mb-4">
             <img :src="logo" alt="PiscisAI Logo" class="h-8 w-auto" />
           </div>
@@ -17,7 +17,7 @@ import logo from '@/assets/logo.png'
         <!-- Menu & Contact Wrapper -->
         <div class="flex flex-col md:flex-row gap-8 md:gap-24">
           <!-- Quick Links -->
-          <div data-aos="fade-up">
+          <div>
             <h3 class="text-lg font-semibold mb-4 font-jakarta text-gray-900">Menu</h3>
             <ul class="space-y-2">
               <li>
@@ -55,7 +55,7 @@ import logo from '@/assets/logo.png'
             </ul>
           </div>
           <!-- Contact -->
-          <div data-aos="fade-up">
+          <div>
             <h3 class="text-lg font-semibold mb-4 font-jakarta text-gray-900">Kontak</h3>
             <ul class="space-y-2">
               <li class="flex items-center text-gray-600 text-sm">
@@ -118,7 +118,6 @@ import logo from '@/assets/logo.png'
       <!-- Bottom Bar -->
       <div
         class="border-t border-gray-200 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center"
-        data-aos="fade-up"
       >
         <p class="text-gray-600 text-sm">© 2025 PiscisAI. All rights reserved.</p>
         <div class="flex space-x-6 mt-4 md:mt-0">
