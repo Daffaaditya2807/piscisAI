@@ -39,7 +39,7 @@ const features = ref([
 <template>
   <section
     id="fitur"
-    class="relative bg-gray-50 py-1 sm:py-10 md:py-20 overflow-hidden px-4 sm:px-6 lg:px-8"
+    class="relative bg-white py-1 sm:py-10 md:py-20 overflow-hidden px-4 sm:px-6 lg:px-8"
   >
     <div class="relative z-10 max-w-7xl mx-auto">
       <div class="text-center">

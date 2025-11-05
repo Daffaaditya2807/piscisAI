@@ -11,20 +11,29 @@ const prediction = useFishPrediction()
 const handlePredictClick = async () => {
   if (!dz.previewImage.value) return
 
-  // Create an image element from the preview
-  const img = new Image()
-  img.crossOrigin = 'anonymous'
-  img.src = dz.previewImage.value
+  // Set loading state immediately when button is clicked
+  prediction.isLoading.value = true
+  prediction.showResults.value = false
+  prediction.predictionResults.value = []
 
-  // Wait for image to load before predicting
-  img.onload = async () => {
+  try {
+    // Create an image element from the preview
+    const img = new Image()
+    img.crossOrigin = 'anonymous'
+    img.src = dz.previewImage.value
+
+    // Wait for image to load before predicting
+    await new Promise<void>((resolve, reject) => {
+      img.onload = () => resolve()
+      img.onerror = () => reject(new Error('Gagal memuat gambar'))
+    })
+
     // Convert image to canvas for better compatibility
     const canvas = document.createElement('canvas')
     const ctx = canvas.getContext('2d')
 
     if (!ctx) {
-      alert('Tidak dapat membuat canvas context')
-      return
+      throw new Error('Tidak dapat membuat canvas context')
     }
 
     // Set canvas size to match Teachable Machine expected size (224x224)
@@ -36,6 +45,10 @@ const handlePredictClick = async () => {
 
     // Predict using canvas
     await prediction.handlePredict(canvas)
+  } catch (error) {
+    console.error('Error during prediction:', error)
+    alert(error instanceof Error ? error.message : 'Terjadi kesalahan saat memprediksi gambar')
+    prediction.isLoading.value = false
   }
 }
 
@@ -70,16 +83,18 @@ const handleReset = () => {
         alt="Awan latar"
         class="absolute cloud hidden xl:flex bottom-[0%] left-[0%] pointer-events-none"
       />
-      <img :src="cloud2" alt="Awan latar" class="cloud top-[0%] right-[0%] pointer-events-none" />
+      <img
+        :src="cloud2"
+        alt="Awan latar"
+        class="cloud hidden xl:flex top-[0%] right-[0%] pointer-events-none"
+      />
       <h2 class="text-3xl md:text-4xl font-semibold font-jakarta text-gray-800">
         Identifikasi Dari <span class="text-orange-500">Gambar</span>
       </h2>
-      <p class="mt-3 text-base font-jakarta text-gray-600 max-w-2xl mx-auto">
-        Unggah satu foto untuk melihat Top-5 prediksi dan skor keputusannya.
-      </p>
-      <p class="text-base font-jakarta text-gray-600 max-w-2xl mx-auto">
-        AI hanya dapat memprediksi spesies ikan berikut :
-        <span class="font-bold text-gray-800"
+      <p class="mt-3 px-3 md:px-0 text-base font-jakarta text-gray-600 max-w-2xl mx-auto">
+        Unggah satu foto untuk melihat Top-5 prediksi dan skor keputusannya. AI hanya dapat
+        memprediksi spesies ikan berikut :
+        <span class="italic text-gray-800"
           >Bandeng, Belanak, Bulan-Bulan, Ikan Mas India, Ikas Mas Koki, Ikan Mas Perak, Ikan Mas
           Rumput, Kakap, Ketang Laut, Nila, Patin, Senangin, Wader Bintik Hitam.</span
         >
@@ -87,11 +102,11 @@ const handleReset = () => {
       <div
         class="absolute bottom-0 left-0 w-full h-[318px] bg-gradient-to-t from-white to-transparent z-0 pointer-events-none"
       ></div>
-      <div class="mt-12 max-w-3xl mx-auto">
+      <div class="mt-0 md:mt-12 max-w-3xl mx-auto">
         <!-- Upload Section -->
         <div
           v-if="!prediction.showResults.value"
-          class="shadow-lg backdrop-blur-md bg-white/20 rounded-2xl p-6"
+          class="backdrop-blur-md bg-white/20 rounded-2xl p-6"
         >
           <div
             @drop.prevent="dz.handleDrop"
@@ -200,7 +215,7 @@ const handleReset = () => {
         <!-- Results Section -->
         <div
           v-else
-          class="relative shadow-lg backdrop-blur-md bg-white/90 rounded-2xl p-8"
+          class="relative mt-5 md:mt-0 backdrop-blur-md bg-white/90 rounded-2xl p-8"
           data-aos="fade-up"
         >
           <!-- Close Button -->

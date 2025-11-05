@@ -128,7 +128,7 @@ import detech from '@/assets/hero/detech.png'
         </button>
       </div>
 
-      <div class="relative w-full max-w-4xl mx-auto mt-10 md:mt-10">
+      <div class="relative w-full max-w-4xl mx-auto mt-24 md:mt-10">
         <div
           class="relative w-full max-w-4xl rounded-2xl shadow-lg backdrop-blur-md bg-white/40 aspect-[16/9]"
         >
