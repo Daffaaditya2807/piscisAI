@@ -17,7 +17,7 @@ import logo from '@/assets/logo.png'
         <!-- Menu & Contact Wrapper -->
         <div class="flex flex-col md:flex-row gap-8 md:gap-24">
           <!-- Quick Links -->
-          <div data-aos="fade-up" data-aos-delay="100">
+          <div data-aos="fade-up">
             <h3 class="text-lg font-semibold mb-4 font-jakarta text-gray-900">Menu</h3>
             <ul class="space-y-2">
               <li>
@@ -55,7 +55,7 @@ import logo from '@/assets/logo.png'
             </ul>
           </div>
           <!-- Contact -->
-          <div data-aos="fade-up" data-aos-delay="200">
+          <div data-aos="fade-up">
             <h3 class="text-lg font-semibold mb-4 font-jakarta text-gray-900">Kontak</h3>
             <ul class="space-y-2">
               <li class="flex items-center text-gray-600 text-sm">

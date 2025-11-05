@@ -88,16 +88,12 @@ const handleReset = () => {
         alt="Awan latar"
         class="cloud hidden xl:flex top-[0%] right-[0%] pointer-events-none"
       />
-      <h2
-        class="text-3xl md:text-4xl font-semibold font-jakarta text-gray-800"
-        data-aos="fade-up"
-      >
+      <h2 class="text-3xl md:text-4xl font-semibold font-jakarta text-gray-800" data-aos="fade-up">
         Identifikasi Dari <span class="text-orange-500">Gambar</span>
       </h2>
       <p
         class="mt-3 px-3 md:px-0 text-base font-jakarta text-gray-600 max-w-2xl mx-auto"
         data-aos="fade-up"
-        data-aos-delay="100"
       >
         Unggah satu foto untuk melihat Top-5 prediksi dan skor keputusannya. AI hanya dapat
         memprediksi spesies ikan berikut :
@@ -115,7 +111,6 @@ const handleReset = () => {
           v-if="!prediction.showResults.value"
           class="backdrop-blur-md bg-white/20 rounded-2xl p-6"
           data-aos="fade-up"
-          data-aos-delay="200"
         >
           <div
             @drop.prevent="dz.handleDrop"
@@ -264,7 +259,6 @@ const handleReset = () => {
                 :key="index"
                 class="transition-all duration-300 hover:scale-[1.02]"
                 :data-aos="'fade-left'"
-                :data-aos-delay="index * 100"
               >
                 <div class="flex justify-between items-center mb-1">
                   <span class="font-semibold text-gray-700 font-jakarta">{{ result.name }}</span>

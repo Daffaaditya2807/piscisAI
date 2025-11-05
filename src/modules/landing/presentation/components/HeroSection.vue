@@ -114,23 +114,17 @@ import detech from '@/assets/hero/detech.png'
         <h1
           class="text-3xl md:text-5xl lg:text-6xl max-w-4xl font-semibold font-jakarta mx-auto leading-tight"
           data-aos="fade-up"
-          data-aos-delay="100"
         >
           Kenali Setiap Spesies Ikan dengan
           <span class="text-orange-500 font-jakarta font-semibold">Kecerdasan Buatan</span>
         </h1>
-        <p
-          class="mt-2 text-xs md:text-lg text-gray-600 max-w-2xl mx-auto"
-          data-aos="fade-up"
-          data-aos-delay="200"
-        >
+        <p class="mt-2 text-xs md:text-lg text-gray-600 max-w-2xl mx-auto" data-aos="fade-up">
           Unggah satu foto — biarkan PiscisAI menganalisis dan memprediksi jenis ikan dengan AI.
         </p>
         <button
           class="shimmer-button mt-8 rounded-full bg-gradient-to-b from-[#fb923c] to-[#ea580c] px-6 py-3 font-semibold text-white shadow-[0_10px_30px_rgba(234,88,12,0.4)] hover:shadow-[0_15px_40px_rgba(234,88,12,0.6)] hover:scale-[1.05] transition-all duration-300"
           onclick="document.getElementById('ai-checker').scrollIntoView({ behavior: 'smooth' })"
           data-aos="zoom-in"
-          data-aos-delay="300"
         >
           Mulai Sekarang
         </button>
@@ -143,31 +137,31 @@ import detech from '@/assets/hero/detech.png'
           <img
             :src="detech"
             alt="contoh deteksi"
-            class="absolute inset-0 w-full h-full md:h-auto object-cover md:object-contain rounded-2xl pointer-events-none"
+            class="absolute inset-0 w-full h-full md:h-auto object-cover md:object-contain rounded-2xl"
           />
         </div>
 
         <IconHero
           :rotation="30.61"
-          class="absolute left-[4%] top-[-5%] md:left-[4%] md:top-[-5%] lg:left-[5%] lg:top-[-5%] pointer-events-none"
+          class="absolute left-[4%] top-[-5%] md:left-[4%] md:top-[-5%] lg:left-[5%] lg:top-[-5%]"
         >
           🐟
         </IconHero>
         <IconHero
           :rotation="15.55"
-          class="absolute right-[4%] top-[-5%] md:right-[4%] md:top-[-10%] lg:right-[5%] lg:top-[-10%] pointer-events-none"
+          class="absolute right-[4%] top-[-5%] md:right-[4%] md:top-[-10%] lg:right-[5%] lg:top-[-10%]"
         >
           👇
         </IconHero>
         <IconHero
           :rotation="-11.99"
-          class="absolute left-[-2%] top-[45%] md:left-[-2%] md:top-[35%] lg:left-[-5%] lg:top-[30%] pointer-events-none"
+          class="absolute left-[-2%] top-[45%] md:left-[-2%] md:top-[35%] lg:left-[-5%] lg:top-[30%]"
         >
           👌
         </IconHero>
         <IconHero
           :rotation="25.23"
-          class="absolute right-[-2%] top-[45%] md:right-[-2%] md:top-[35%] lg:right-[-5%] lg:top-[30%] pointer-events-none"
+          class="absolute right-[-2%] top-[45%] md:right-[-2%] md:top-[35%] lg:right-[-5%] lg:top-[30%]"
         >
           💦
         </IconHero>

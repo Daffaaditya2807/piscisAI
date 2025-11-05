@@ -49,11 +49,7 @@ const features = ref([
         >
           Fitur yang Membuat <span class="text-orange-500">Kami Berbeda</span>
         </h2>
-        <p
-          class="mt-3 text-base font-jakarta text-gray-600 max-w-2xl mx-auto"
-          data-aos="fade-up"
-          data-aos-delay="100"
-        >
+        <p class="mt-3 text-base font-jakarta text-gray-600 max-w-2xl mx-auto" data-aos="fade-up">
           Semua yang Anda butuhkan untuk mengenali ikan dengan cepat.
         </p>
       </div>
@@ -64,7 +60,6 @@ const features = ref([
           :key="feature.title"
           class="relative flex flex-col h-[400px] md:h-[500px] lg:h-[600px] rounded-2xl shadow-lg bg-gradient-to-b from-white to-[#FFDABE] overflow-hidden"
           data-aos="fade-up"
-          :data-aos-delay="200 + index * 100"
         >
           <img :src="cloud1" alt="Awan latar" class="cloud bottom-[0%] left-[0%]" />
           <img :src="cloud2" alt="Awan latar" class="cloud top-[0%] right-[0%]" />
