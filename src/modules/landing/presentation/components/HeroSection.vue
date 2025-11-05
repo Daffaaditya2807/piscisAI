@@ -118,8 +118,7 @@ import detech from '@/assets/hero/detech.png'
           <span class="text-orange-500 font-jakarta font-semibold">Kecerdasan Buatan</span>
         </h1>
         <p class="mt-2 text-xs md:text-lg text-gray-600 max-w-2xl mx-auto">
-          Unggah satu foto — biarkan PiscisAI menganalisis dan memberi tahu jenis ikan secara cepat,
-          akurat, dan transparan.
+          Unggah satu foto — biarkan PiscisAI menganalisis dan memprediksi jenis ikan dengan AI.
         </p>
         <button
           class="shimmer-button mt-8 rounded-full bg-gradient-to-b from-[#fb923c] to-[#ea580c] px-6 py-3 font-semibold text-white shadow-[0_10px_30px_rgba(234,88,12,0.4)] hover:shadow-[0_15px_40px_rgba(234,88,12,0.6)] hover:scale-[1.05] transition-all duration-300"

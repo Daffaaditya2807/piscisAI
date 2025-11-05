@@ -75,7 +75,14 @@ const handleReset = () => {
         Identifikasi Dari <span class="text-orange-500">Gambar</span>
       </h2>
       <p class="mt-3 text-base font-jakarta text-gray-600 max-w-2xl mx-auto">
-        Unggah satu foto untuk melihat Top-5 prediksi dan confidence.
+        Unggah satu foto untuk melihat Top-5 prediksi dan skor keputusannya.
+      </p>
+      <p class="text-base font-jakarta text-gray-600 max-w-2xl mx-auto">
+        AI hanya dapat memprediksi spesies ikan berikut :
+        <span class="font-bold text-gray-800"
+          >Bandeng, Belanak, Bulan-Bulan, Ikan Mas India, Ikas Mas Koki, Ikan Mas Perak, Ikan Mas
+          Rumput, Kakap, Ketang Laut, Nila, Patin, Senangin, Wader Bintik Hitam.</span
+        >
       </p>
       <div
         class="absolute bottom-0 left-0 w-full h-[318px] bg-gradient-to-t from-white to-transparent z-0 pointer-events-none"

@@ -8,19 +8,19 @@ import chatai from '@/assets/fitur/chatai.png'
 
 const features = ref([
   {
-    title: 'Klasifikasi Gambar Otomatis',
+    title: 'Klasifikasi Beberapa spesies Ikan',
     description: 'Unggah foto ikan dan dapatkan hasil prediksi instan.',
-    placeholder: load,
+    placeholder: chatai,
   },
   {
-    title: 'Confidence Bar',
+    title: 'Skor Kepeputusan',
     description: 'Visualisasi skor untuk setiap label dalam bentuk grafik.',
     placeholder: predict,
   },
   {
     title: 'Ekspor Hasil',
-    description: 'Simpan hasil prediksi sebagai laporan PNG/CSV untuk analisis.',
-    placeholder: chatai,
+    description: 'Simpan hasil prediksi sebagai laporan CSV untuk analisis.',
+    placeholder: load,
   },
 ])
 </script>

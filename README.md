@@ -24,7 +24,7 @@
 🎨 **Modern UI/UX**
 - Built with Vue 3 Composition API
 - Smooth animations with AOS
-- Responsive design with TailwindCSS
+v- Responsive design with TailwindCSS
 
 </td>
 <td width="50%">
